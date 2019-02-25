@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Candycat - Endulza tu recuerdos!!</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/invie.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
+  </head>
+  <body onload="setGaleria();">
+    <header class="headerNav">
+          <div class="container">
+            <span class="burguer-button icon-menu" id="burguer-button"></span>
+            <nav class="menuf" id="menuf"> <!-- menu -->
+              <ul>
+                <li>
+                  <a id="m_md" class="menu_option" href="index.html">Mesa de dulces</a>
+                </li>
+                <li>
+                  <a id="m_rd" class="menu_option" href="recuerdosydec.html">Recuerdos y decoraciones</a>
+                </li>
+                <li>
+                  <a id="m_gl"  class="menu_option" href="galeria.html">Galeria</a>
+                </li>
+                <li>
+                  <a id="m_co" class="menu_option" href="#footer">Contacto</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="grid_nav">
+              <nav class ="leftnavigation fade-down animated fadeInDown">
+                <div>
+                  <ul class="menu">
+                    <a href="recuerdosydec.html"><li id="mpRec">Recuerdos y decoraciones</li></a>
+                    <li onclick="mesa();">Mesa de dulces</li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="grid_nav_center logo_height">
+              <img src="images/Logo.png" srcset="images/Logo.png 1x, images/Logo.png 2x" width="140" height="140"/>
+            </div>
+            <div class="grid_nav">
+              <nav class ="rightnavigation fade-down animated fadeInDown">
+                <div>
+                  <ul class="menu">
+                    <a href="galeria.html"><li id="mpGaleria">Galeria</li></a>
+                    <li onclick="Contacto();">Contacto</li>
+                  </ul>
+                  <div class="leftmargin grid_nav_icons" onclick="doOpen('fb')">
+                    <img src="images/icono_facebook.png" srcset="images/icono_facebook.png 1x, images/icono_facebook.png 2x" width="11" height="22"/>
+                  </div>
+                  <div class="grid_nav_icons" onclick="doOpen('tw')">
+                    <img src="images/icono_twitter.png" srcset="images/icono_twitter.png 1x, images/icono_twitter.png 2x" width="24" height="20"/>
+                  </div>
+                  <div class="grid_nav_icons" onclick="doOpen('in')">
+                    <img src="images/icono_instagram.png" srcset="images/icono_instagram.png 1x, images/icono_instagram.png 2x" width="17" height="20"/>
+                  </div>
+                </div>
+              </nav>
+            </div>
+        </div>
+    </header>
+    <section id="contenedor" class="contenedor_galeria"> <!-- portada -->
+      <div class="galeria_background">
+        <div class="titulo_seccion">Galeria</div>
+        <div class="grid_nav_galeria">
+          <nav class ="nav_galeria">
+            <div>
+              <ul class="menu">
+                <li id="bs" onclick="cargaImagenes(this.id);" class="li_menu_galeria">Baby Shower</li>
+                <li id="bd" onclick="cargaImagenes(this.id);" class="li_menu_galeria">Bodas</li>
+                <li id="de" onclick="cargaImagenes(this.id);" class="li_menu_galeria">Decoraciones</li>
+                <li id="re" onclick="cargaImagenes(this.id);" class="li_menu_galeria">Recuerdos</li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+
+
+      	<ul class="galeria">
+      		<li id="li1"><img id="ima1" onclick="muestraModal('1');" src="images/galeria/bs_1.jpg"></li>
+      		<li id="li2"><img id="ima2" onclick="muestraModal('2');" src="images/galeria/bs_2.jpg"></li>
+      		<li id="li3"><img id="ima3" onclick="muestraModal('3');" src="images/galeria/bs_3.jpg"></li>
+      		<li id="li4"><img id="ima4" onclick="muestraModal('4');" src="images/galeria/bs_4.jpg"></li>
+        </ul>
+        <ul class="galeria">
+      		<li id="li5"><img id="ima5" onclick="muestraModal('5');" src="images/galeria/bs_5.jpg"></li>
+      		<li id="li6"><img id="ima6" onclick="muestraModal('6');" src="images/galeria/bs_6.jpg"></li>
+      		<li id="li7"><img id="ima7" onclick="muestraModal('7');" src="images/galeria/bs_7.jpg"></li>
+      		<li id="li8"><img id="ima8" onclick="muestraModal('8');" src="images/galeria/bs_8.jpg"></li>
+        </ul>
+        <ul class="galeria">
+      		<li id="li9"><img id="ima9" onclick="muestraModal('9');" src="images/galeria/bs_9.jpg"></li>
+      		<li id="li10"><img id="ima10" onclick="muestraModal('10');" src="images/galeria/bs_10.jpg"></li>
+      		<li id="li11"><img id="ima11" onclick="muestraModal('11');" src="images/galeria/bs_11.jpg"></li>
+      		<li id="li12"><img id="ima12" onclick="muestraModal('12');" src="images/galeria/bs_12.jpg"></li>
+        </ul>
+        <ul class="galeria">
+      		<li id="li13"><img id="ima13" onclick="muestraModal('13');" src="images/galeria/bs_13.jpg"></li>
+      		<li id="li14"><img id="ima14" onclick="muestraModal('14');" src="images/galeria/bs_14.jpg"></li>
+      		<li id="li15"><img id="ima15" onclick="muestraModal('15');" src="images/galeria/bs_15.jpg"></li>
+      		<li id="li16"><img id="ima16" onclick="muestraModal('16');" src="images/galeria/bs_16.jpg"></li>
+        </ul>
+        <ul class="galeria">
+      		<li id="li17"><img id="ima17" onclick="muestraModal('17');" src="images/galeria/bs_17.jpg"></li>
+      		<li id="li18"><img id="ima18" onclick="muestraModal('18');" src="images/galeria/bs_18.jpg"></li>
+      		<li id="li19"><img id="ima19" onclick="muestraModal('19');" src="images/galeria/bs_19.jpg"></li>
+      		<li id="li20"><img id="ima20" onclick="muestraModal('20');" src="images/galeria/bs_20.jpg"></li>
+        </ul>
+
+
+
+      	<div class="modal" id="img1">
+      		<h3>Galeria</h3>
+      		<div class="imagen">
+      			<div onclick="atras();">&#60;</div>
+      			<div onclick="adelante();"><img id="image_modal" src="images/galeria/bs_1.jpg"></div>
+      			<div onclick="adelante();">></div>
+      		</div>
+      		<div class="cerrar" onclick="ocultaModal();">X</div>
+      	</div>
+
+
+    </section>
+    <section id="footer"> <!-- portada -->
+      <div class="portada footer">
+        <div class = "formulario">
+          <form action="mailto:candycat.contacto@gmail.com">
+            <div class="formulario_titulo">Contacto</div>
+            <div class="col1">
+              <input type="text" required id="nombre" name="nombre" placeholder="* Nombre" class="formulario_inputs" maxlength="30"/>
+              <input type="email" required id="email" name="email" placeholder="* Mail" class="formulario_inputs" maxlength="30"/>
+            </div>
+            <div class="col2">
+              <textarea name="comantarios" id="comentarios" cols="30" rows="7" placeholder="Comentario" class="formulario_comentarios" maxlength="300"></textarea>
+              <input type="submit" value="Enviar" class="button"/>
+            </div>
+          </form>
+        </div>
+        <div class="grid_address_footer">
+            <div class="grid_address_img">
+              <img src="images/icono_domicilio.png" srcset="images/icono_domicilio.png 1x, images/icono_domicilio.png" width="14" height="20"/>
+            </div>
+            <div class="grid_address_text">
+              <p>Oriente 32 # 3569, Col. Merced Balbuena, Del. Venustiano Carranza. Ciudad de México</p>
+            </div>
+        </div>
+        <div class="grid_phone_footer">
+          <div class="grid_phone_img">
+            <img src="images/icono_cel.png" srcset="images/icono_cel.png 1x, images/icono_cel.png" width="14" height="20"/>
+          </div>
+          <div class="grid_phone_text">
+            <p>55 1856 0689</p>
+          </div>
+        </div>
+        <div class="grid_follow_us">Siguenos</div>
+        <div class="grid_footer_fb" onclick="doOpen('fb')">
+          <img src="images/icono_facebook.png" srcset="images/icono_facebook.png 1x, images/icono_facebook.png" width="19" height="38"/>
+        </div>
+        <div class="grid_footer_tw" onclick="doOpen('tw')">
+          <img src="images/icono_twitter.png" srcset="images/icono_twitter.png 1x, images/icono_twitter.png" width="43" height="35"/>
+        </div>
+        <div class="grid_footer_in" onclick="doOpen('in')">
+          <img src="images/icono instagram.png" srcset="images/icono_instagram.png 1x, images/icono_instagram.png" width="40" height="45"/>
+        </div>
+        <div class= "grid_copy">
+          Candycat &copy; 2017. Todos los derechos reservados
+        </div>
+      </div>
+    </section>
+    <script>
+      var consulta = window.matchMedia('(max-width: 700px)');
+      consulta.addListener(mediaQuery);
+
+      var $burguerButton = document.getElementById('burguer-button');
+      var $menu = document.getElementById('menuf');
+      function toggleMenu(){
+        $menu.classList.toggle('active')
+      };
+      function showMenu(){
+        $menu.classList.add('active');
+      };
+      function hideMenu(){
+        $menu.classList.remove('active');
+      };
+
+      function mediaQuery() {
+        if (consulta.matches) {
+          // si se cumple hagamos esto
+          console.log('se cumplió la condicion');
+          $burguerButton.addEventListener('touchstart', toggleMenu);
+          document.getElementById('contenedor').style.height = "5200px";
+        } else {
+          $burguerButton.removeEventListener('touchstart', toggleMenu);
+          document.getElementById('contenedor').style.height = "1600px";
+          // si no se cumple hagamos esto
+          console.log('no se cumplió la condicion');
+        }
+      }
+      mediaQuery();
+
+      // lazy loading
+      var bLazy = new Blazy({
+          selector: 'img'
+      });
+      // $burguerButton.addEventListener('touchstart', toggleMenu);
+
+      // function toggleMenu(){
+      //   $menu.classList.toggle('active')
+      // };
+
+      // Gestos touch
+      var $body = document.body;
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
+    </script>
+  </body>
+</html>
